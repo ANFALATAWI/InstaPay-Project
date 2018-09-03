@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ftc-MK-N0V">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scan from Gallery-->
+        <scene sceneID="PBD-hi-c9z">
+            <objects>
+                <viewController id="Ftc-MK-N0V" customClass="ImageGalleryViewController" customModule="instaPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Osw-zO-b7T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irI-6U-IbS">
+                                <rect key="frame" x="107.5" y="568" width="160" height="54"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.20784313730000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="97o-ww-Vyb"/>
+                                    <constraint firstAttribute="width" constant="160" id="yYX-qC-rAi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Import image">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="importButton:" destination="Ftc-MK-N0V" eventType="touchUpInside" id="CxE-wE-QOu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Image From Gallery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptr-ly-Gjd">
+                                <rect key="frame" x="37.5" y="64" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="b1A-hH-Uqc"/>
+                                    <constraint firstAttribute="height" constant="30" id="c8O-EO-TzE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="514-tR-X8x">
+                                <rect key="frame" x="16" y="149" width="343" height="369"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GP4-BP-xQB">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="369"/>
+                                        <color key="backgroundColor" red="0.69019607839999997" green="0.68627450980000004" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="369" id="StT-Zt-u1h"/>
+                                    <constraint firstAttribute="width" constant="343" id="hRm-cy-9Fe"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFQ-q5-3O2">
+                                <rect key="frame" x="163.5" y="630" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButton3:" destination="Ftc-MK-N0V" eventType="touchUpInside" id="bd5-JU-eEe"/>
+                                    <segue destination="ecO-rZ-8K4" kind="show" id="oq4-JT-6Fj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50588235290000005" green="0.4941176471" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ptr-ly-Gjd" firstAttribute="centerX" secondItem="Osw-zO-b7T" secondAttribute="centerX" id="92B-3V-NPs"/>
+                            <constraint firstItem="514-tR-X8x" firstAttribute="centerY" secondItem="Osw-zO-b7T" secondAttribute="centerY" id="AXN-vY-VDS"/>
+                            <constraint firstItem="514-tR-X8x" firstAttribute="centerX" secondItem="Osw-zO-b7T" secondAttribute="centerX" id="Bub-KR-Pwe"/>
+                            <constraint firstItem="514-tR-X8x" firstAttribute="top" secondItem="Ptr-ly-Gjd" secondAttribute="bottom" constant="55" id="G25-vX-l8t"/>
+                            <constraint firstItem="irI-6U-IbS" firstAttribute="centerX" secondItem="Osw-zO-b7T" secondAttribute="centerX" id="Hwe-8u-gtA"/>
+                            <constraint firstItem="gFQ-q5-3O2" firstAttribute="centerX" secondItem="Osw-zO-b7T" secondAttribute="centerX" id="MIM-ED-qZr"/>
+                            <constraint firstItem="irI-6U-IbS" firstAttribute="top" secondItem="514-tR-X8x" secondAttribute="bottom" constant="50" id="cAp-A4-tuh"/>
+                            <constraint firstItem="gFQ-q5-3O2" firstAttribute="top" secondItem="irI-6U-IbS" secondAttribute="bottom" constant="8" id="fPl-Zu-TGM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PJ0-Ts-vWZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scan from Gallery" id="INs-Tv-CG5"/>
+                    <connections>
+                        <outlet property="imageView" destination="GP4-BP-xQB" id="dtF-aw-E3I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="plh-2W-aXv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.0000000000001" y="184.23913043478262"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="bKd-Ky-8UG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="ecO-rZ-8K4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rh7-F4-Fmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000" y="615"/>
+        </scene>
+    </scenes>
+</document>

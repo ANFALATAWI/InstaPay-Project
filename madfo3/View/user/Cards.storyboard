@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4c-QM-BLe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add New Card View Controller-->
+        <scene sceneID="qPy-gL-i7d">
+            <objects>
+                <viewController id="M4c-QM-BLe" customClass="AddNewCardViewController" customModule="instaPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0yx-KO-rBT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N9q-Gu-oU0" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="79" width="343" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="jp5-ql-ufa"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" red="0.69019607839999997" green="0.68627450980000004" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.23137254900000001" green="0.20784313730000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ai-xe-toJ" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="152" width="343" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="6E2-kJ-2k9"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" red="0.69019607839999997" green="0.68627450980000004" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.23137254900000001" green="0.20784313730000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCe-tG-zaY">
+                                <rect key="frame" x="22" y="598" width="337" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.76470588240000004" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ah4-M1-Qhm"/>
+                                    <constraint firstAttribute="width" constant="337" id="HJ7-Z5-UKB"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addNewCard:" destination="M4c-QM-BLe" eventType="touchUpInside" id="AJ9-C5-pAi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rn-N2-uCS">
+                                <rect key="frame" x="16" y="20" width="36" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="YqM-ux-NJo"/>
+                                    <constraint firstAttribute="width" constant="36" id="fsA-E9-sc8"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="cancel-button"/>
+                                <connections>
+                                    <action selector="cancel:" destination="M4c-QM-BLe" eventType="touchUpInside" id="Xvc-KD-NFa"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MM/YY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g8z-ee-e1j" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="239" width="100" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="9MV-gi-Fa4"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="sV3-Nw-HiM"/>
+                                    <constraint firstAttribute="height" constant="42" id="scG-Fj-ErM"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" red="0.69019607839999997" green="0.68627450980000004" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.23137254900000001" green="0.20784313730000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yaY-iH-oai" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="248" y="239" width="111" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="Zbb-jr-HFj"/>
+                                    <constraint firstAttribute="height" constant="42" id="eiI-fE-Dwh"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" red="0.69019607839999997" green="0.68627450980000004" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.23137254900000001" green="0.20784313730000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3oJ-kz-ODQ" firstAttribute="trailing" secondItem="0ai-xe-toJ" secondAttribute="trailing" constant="16" id="CTy-0Q-RcJ"/>
+                            <constraint firstItem="0ai-xe-toJ" firstAttribute="leading" secondItem="3oJ-kz-ODQ" secondAttribute="leading" constant="16" id="IkF-J2-Ad9"/>
+                            <constraint firstItem="0Rn-N2-uCS" firstAttribute="leading" secondItem="3oJ-kz-ODQ" secondAttribute="leading" constant="16" id="JQg-eS-57K"/>
+                            <constraint firstItem="3oJ-kz-ODQ" firstAttribute="bottom" secondItem="rCe-tG-zaY" secondAttribute="bottom" constant="29" id="MpP-wf-tA7"/>
+                            <constraint firstItem="g8z-ee-e1j" firstAttribute="top" secondItem="0ai-xe-toJ" secondAttribute="bottom" constant="42" id="R2P-lk-o5E"/>
+                            <constraint firstItem="g8z-ee-e1j" firstAttribute="top" secondItem="0ai-xe-toJ" secondAttribute="bottom" constant="42" id="XT0-tx-MEa"/>
+                            <constraint firstItem="g8z-ee-e1j" firstAttribute="leading" secondItem="3oJ-kz-ODQ" secondAttribute="leading" constant="16" id="YDT-ee-P17"/>
+                            <constraint firstItem="0Rn-N2-uCS" firstAttribute="top" secondItem="3oJ-kz-ODQ" secondAttribute="top" id="YKL-EA-YpI"/>
+                            <constraint firstItem="N9q-Gu-oU0" firstAttribute="top" secondItem="0Rn-N2-uCS" secondAttribute="bottom" constant="26" id="YdR-TZ-Zar"/>
+                            <constraint firstItem="rCe-tG-zaY" firstAttribute="leading" secondItem="3oJ-kz-ODQ" secondAttribute="leading" constant="22" id="fUS-6E-bbV"/>
+                            <constraint firstItem="yaY-iH-oai" firstAttribute="top" secondItem="0ai-xe-toJ" secondAttribute="bottom" constant="42" id="foi-Kf-1jA"/>
+                            <constraint firstItem="g8z-ee-e1j" firstAttribute="leading" secondItem="3oJ-kz-ODQ" secondAttribute="leading" constant="16" id="ggi-w9-GSV"/>
+                            <constraint firstItem="0ai-xe-toJ" firstAttribute="top" secondItem="N9q-Gu-oU0" secondAttribute="bottom" constant="30" id="hLW-Ow-6h5"/>
+                            <constraint firstItem="3oJ-kz-ODQ" firstAttribute="trailing" secondItem="rCe-tG-zaY" secondAttribute="trailing" constant="16" id="jYQ-cy-bfe"/>
+                            <constraint firstItem="3oJ-kz-ODQ" firstAttribute="trailing" secondItem="yaY-iH-oai" secondAttribute="trailing" constant="16" id="lJS-GB-Q0M"/>
+                            <constraint firstItem="N9q-Gu-oU0" firstAttribute="leading" secondItem="3oJ-kz-ODQ" secondAttribute="leading" constant="16" id="s8Y-qD-nKz"/>
+                            <constraint firstItem="3oJ-kz-ODQ" firstAttribute="trailing" secondItem="N9q-Gu-oU0" secondAttribute="trailing" constant="16" id="u57-IE-8ho"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3oJ-kz-ODQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="expiryDate" destination="g8z-ee-e1j" id="4z9-VI-qVw"/>
+                        <outlet property="nameOnCard" destination="N9q-Gu-oU0" id="vAL-op-cZ3"/>
+                        <outlet property="numberOfCard" destination="0ai-xe-toJ" id="ijm-eK-rTa"/>
+                        <outlet property="password" destination="yaY-iH-oai" id="C8a-Cz-KtB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wWx-rn-rbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080.8" y="196.55172413793105"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cancel-button" width="256" height="256"/>
+    </resources>
+</document>

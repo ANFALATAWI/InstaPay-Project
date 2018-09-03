@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SWq-Xg-jNk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="rP5-jJ-Ddc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="gEn-bf-kxX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3aC-zM-AuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749" y="1501"/>
+        </scene>
+        <!--Add Freind View Controller-->
+        <scene sceneID="9qR-uv-lvH">
+            <objects>
+                <viewController id="SWq-Xg-jNk" customClass="AddFreindViewController" customModule="instaPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kOX-xp-15X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pf-LC-bA0">
+                                <rect key="frame" x="78" y="292" width="219" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="fzq-t0-fQa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCU-AK-Fe2">
+                                <rect key="frame" x="0.0" y="608" width="375" height="59"/>
+                                <color key="backgroundColor" red="0.23921568630000001" green="0.20392156859999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="O01-Ym-dYO"/>
+                                </constraints>
+                                <state key="normal" title="Add As friend">
+                                    <color key="titleColor" red="1" green="0.99997031690000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddFreind:" destination="SWq-Xg-jNk" eventType="touchUpInside" id="djg-kX-4mS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3g-ho-gpN">
+                                <rect key="frame" x="0.0" y="552" width="375" height="56"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="16y-hk-WiH"/>
+                                </constraints>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="0.99997031690000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="SWq-Xg-jNk" eventType="touchUpInside" id="v4g-lx-UGs"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a0a-1D-hNd">
+                                <rect key="frame" x="112.5" y="116" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="KX9-x4-Ior"/>
+                                    <constraint firstAttribute="height" constant="150" id="LxG-Rm-h3I"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xCU-AK-Fe2" firstAttribute="trailing" secondItem="I4c-Ry-yVV" secondAttribute="trailing" id="2Cg-yB-fup"/>
+                            <constraint firstItem="N3g-ho-gpN" firstAttribute="leading" secondItem="I4c-Ry-yVV" secondAttribute="leading" id="4iW-95-kVz"/>
+                            <constraint firstItem="9pf-LC-bA0" firstAttribute="leading" secondItem="I4c-Ry-yVV" secondAttribute="leading" constant="78" id="CnK-qz-r5u"/>
+                            <constraint firstItem="a0a-1D-hNd" firstAttribute="top" secondItem="I4c-Ry-yVV" secondAttribute="top" constant="96" id="Hvd-u2-hyu"/>
+                            <constraint firstItem="xCU-AK-Fe2" firstAttribute="top" secondItem="N3g-ho-gpN" secondAttribute="bottom" id="I5n-9B-FCd"/>
+                            <constraint firstItem="xCU-AK-Fe2" firstAttribute="top" secondItem="N3g-ho-gpN" secondAttribute="bottom" id="Kbz-4N-8u1"/>
+                            <constraint firstItem="N3g-ho-gpN" firstAttribute="trailing" secondItem="I4c-Ry-yVV" secondAttribute="trailing" id="O0Z-rP-hRV"/>
+                            <constraint firstItem="9pf-LC-bA0" firstAttribute="top" secondItem="I4c-Ry-yVV" secondAttribute="top" constant="272" id="QZc-mr-dUT"/>
+                            <constraint firstItem="xCU-AK-Fe2" firstAttribute="leading" secondItem="I4c-Ry-yVV" secondAttribute="leading" id="Tbw-hE-YdP"/>
+                            <constraint firstItem="xCU-AK-Fe2" firstAttribute="bottom" secondItem="I4c-Ry-yVV" secondAttribute="bottom" id="V99-Rh-PBP"/>
+                            <constraint firstItem="a0a-1D-hNd" firstAttribute="centerX" secondItem="kOX-xp-15X" secondAttribute="centerX" id="aLi-cr-8mR"/>
+                            <constraint firstItem="I4c-Ry-yVV" firstAttribute="trailing" secondItem="9pf-LC-bA0" secondAttribute="trailing" constant="78" id="dJP-iS-Dak"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I4c-Ry-yVV"/>
+                    </view>
+                    <connections>
+                        <outlet property="FreindName" destination="9pf-LC-bA0" id="10R-Nb-nxY"/>
+                        <outlet property="friendQr" destination="a0a-1D-hNd" id="fVl-f3-cLQ"/>
+                        <segue destination="gEn-bf-kxX" kind="show" identifier="doneAddedFriend" id="FjC-WQ-vPh"/>
+                        <segue destination="gEn-bf-kxX" kind="show" identifier="cancelFriendsShip" id="sld-Fa-fx2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YjZ-6G-vAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26" y="1502"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="sld-Fa-fx2"/>
+    </inferredMetricsTieBreakers>
+</document>

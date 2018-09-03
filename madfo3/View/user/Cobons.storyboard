@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Send To Friends View Controller-->
+        <scene sceneID="lJo-Xu-sLN">
+            <objects>
+                <viewController storyboardIdentifier="viewFriends" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WcF-Vd-Fl2" customClass="sendToFriendsViewController" customModule="instaPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NWL-OI-PmX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLa-FC-8U0">
+                                <rect key="frame" x="0.0" y="605" width="375" height="62"/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.74901960784313726" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="fh2-gA-O32"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.99997031690000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UO7-Qw-VFQ">
+                                <rect key="frame" x="0.0" y="68" width="375" height="538"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="519" id="omU-tx-2YL" customClass="sendToFriendsCell" customModule="instaPay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="519"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="omU-tx-2YL" id="a5k-2Q-jMe">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="518.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZf-PC-hey">
+                                                    <rect key="frame" x="15" y="11" width="345" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="friendName" destination="xZf-PC-hey" id="4YO-vQ-wtB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="WcF-Vd-Fl2" id="TPz-VQ-Bm0"/>
+                                    <outlet property="delegate" destination="WcF-Vd-Fl2" id="yIA-QO-PbO"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGc-97-5jq">
+                                <rect key="frame" x="339" y="31" width="26" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="WcF-Vd-Fl2" eventType="touchUpInside" id="tXS-sz-WYi"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djG-4c-rfh">
+                                <rect key="frame" x="336" y="620" width="29" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="right-arrow (2)"/>
+                                <connections>
+                                    <action selector="sendToFriendAction:" destination="WcF-Vd-Fl2" eventType="touchUpInside" id="KeX-Vi-GaO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="nLa-FC-8U0" firstAttribute="leading" secondItem="yR9-y2-dLD" secondAttribute="leading" id="DlT-pT-Clp"/>
+                            <constraint firstItem="nLa-FC-8U0" firstAttribute="bottom" secondItem="yR9-y2-dLD" secondAttribute="bottom" id="JOW-jL-3or"/>
+                            <constraint firstItem="nLa-FC-8U0" firstAttribute="trailing" secondItem="yR9-y2-dLD" secondAttribute="trailing" id="dx9-mC-7I6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yR9-y2-dLD"/>
+                    </view>
+                    <connections>
+                        <outlet property="friendsTableView" destination="UO7-Qw-VFQ" id="Dg3-bI-FBv"/>
+                        <outlet property="selectedFriend" destination="nLa-FC-8U0" id="pmG-ly-LZr"/>
+                        <outlet property="sendToFriend" destination="djG-4c-rfh" id="l8E-VS-TvF"/>
+                        <segue destination="V7y-RR-I4N" kind="show" identifier="doneGift" id="IwI-Rt-19t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bKc-9l-oek" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1328.8" y="-1500.8995502248877"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="Gaz-xu-GZ5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="V7y-RR-I4N" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ehE-BX-xcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2001" y="-1303"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cancel" width="256" height="256"/>
+        <image name="right-arrow (2)" width="128" height="128"/>
+    </resources>
+</document>
